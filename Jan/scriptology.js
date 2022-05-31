@@ -32,3 +32,26 @@ if (random2 < 10) {
         <p class="card-text">It's fucking hot m8</p>
     </div>`;
 }
+
+let studentGrades = [
+    ["Martin", 76],
+    ["Thomas", 85],
+    ["Klaus", 65],
+    ["Maria", 93],
+    ["David", 81]
+]
+
+for (let points of studentGrades) {
+    console.log(points[1]);
+    if (points[1] < 60) {
+        console.log("F");
+    } else if (points[1] < 70) {
+        console.log("D");
+    } else if (points[1] < 80) {
+        console.log("C");
+    } else if (points[1] < 90) {
+        console.log("B");
+    } else {
+        console.log("A");
+    }
+}
