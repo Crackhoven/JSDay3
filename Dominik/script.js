@@ -37,14 +37,53 @@ let studentGrades = [
     ["Martin", 76], ["Thomas", 85], ["Klaus", 65], ["Maria", 93], ["David", 81]
  ]
 
- for(let points of studentGrades){
-    console.log(points[1]);
-    if(points[1] < 60){
-        console.log("F");
-    }else if (points[1] < 70)
-    console.log("D");
+// for(let points of studentGrades){
+//     console.log(points[1]);
+//     if(points[1] < 60){
+//         console.log("F");
+//     }else if (points[1] < 70) {
+//         console.log("D");
+//     }else if (points[1] < 80) {
+//         console.log("C");2
+//     }else if (points[1] < 90) {
+//         console.log ("B");
+//     }else { 
+//         console.log ("A");
+//     }      
+// }
 
+let grades = 0
+for (let i = 0; i < studentGrades.length; i++) {
+    grades += studentGrades [i] [1];
+}
 
+let average = (grades / studentGrades.length);
+console.log("Average grade: " + average + " " + check(average));
 
+function check(points) {
+    if(points < 60){
+        return ("F");
+    }else if (points < 70) {
+        return ("D");
+    }else if (points < 80) {
+        return ("C");
+    }else if (points < 90) {
+        return  ("B");
+    }else { 
+        return  ("A");
+    }  
+}
+for (let grade of studentGrades) {
+    console.log(grade[0] + " " + grade[1] + " " + check(grade[1]));
+}
 
- }
+for (let i = 1; i < 101; i++) {
+    if (i%15==0) 
+    console.log("FizzBuzz");
+    else if (i%3==0) 
+    console.log("Fizz");
+    else if (i%5==0) 
+    console.log("Buzz");
+    else
+    console.log (i);
+}
