@@ -24,7 +24,7 @@ if (random2 < 10) {
 } else if (random2 < 26) {
     document.getElementsByClassName("card")[0].innerHTML = `<img src="https://cdn.pixabay.com/photo/2013/08/11/04/24/city-171444_960_720.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-        <p class="card-text">The wather is moderate</p>
+        <p class="card-text">The weather is moderate</p>
     </div>`;
 } else {
     document.getElementsByClassName("card")[0].innerHTML = `<img src="https://cdn.pixabay.com/photo/2016/09/08/13/58/desert-1654439_960_720.jpg" class="card-img-top" alt="...">
@@ -32,3 +32,19 @@ if (random2 < 10) {
         <p class="card-text">It's hot oof</p>
     </div>`;
 }
+
+let studentGrades = [
+    ["Martin", 76], ["Thomas", 85], ["Klaus", 65], ["Maria", 93], ["David", 81]
+ ]
+
+ for(let points of studentGrades){
+    console.log(points[1]);
+    if(points[1] < 60){
+        console.log("F");
+    }else if (points[1] < 70)
+    console.log("D");
+
+
+
+
+ }
